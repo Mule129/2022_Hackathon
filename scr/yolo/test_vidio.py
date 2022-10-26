@@ -4,11 +4,11 @@ import numpy as np
 # 웹캠 신호 받기
 VideoSignal = cv2.VideoCapture(0)
 # YOLO 가중치 파일과 CFG 파일 로드
-YOLO_net = cv2.dnn.readNet("2022_Hackathon\scr\yolo\yolo_tiny\yolov2-tiny.weights","2022_Hackathon\scr\yolo\yolo_tiny\yolov2-tiny.cfg")
+YOLO_net = cv2.dnn.readNet("2022_Hackathon\scr\yolo\yolo_v3_320p\yolov3.weights","2022_Hackathon\scr\yolo\yolo_v3_320p\yolov3.cfg")
 
 # YOLO NETWORK 재구성
 classes = []
-with open("2022_Hackathon\scr\yolo\yolo_tiny\yolo.names", "r") as f:
+with open("2022_Hackathon\scr\yolo\yolo_v3_320p\coco.names", "r") as f:
     classes = [line.strip() for line in f.readlines()]
 layer_names = YOLO_net.getLayerNames()
 output_layers = [layer_names[i - 1] for i in YOLO_net.getUnconnectedOutLayers()]
@@ -65,5 +65,5 @@ while True:
 
     cv2.imshow("YOLOv3", frame)
 
-    if cv2.waitKey(100) > 0:
+    if cv2.waitKey(1) > 0:
         break
