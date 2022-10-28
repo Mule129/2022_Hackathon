@@ -2,10 +2,10 @@ import numpy as np
 import cv2
 from PIL import Image
 import time
-
-cam = cv2.VideoCapture(0)
-"""cam.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
-cam.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)"""
+width, height = 320, 240
+cam = cv2.VideoCapture(1)
+cam.set(cv2.CAP_PROP_FRAME_WIDTH, width)
+cam.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
 action = [0, 1, 2]
 x_data, y_data = [], []
 cnt, i = 0, 0
@@ -19,7 +19,7 @@ while cam != 0:
     cv2.imshow("DataCollet", img)
     #time.sleep(1)
     cnt += 1
-    if cnt >= 20:
+    if cnt >= 100:
         i += 1
         cnt = 0
         if i > 2:
@@ -42,11 +42,11 @@ y_data = np.array([y_data])
 y_data = y_data.T
 
 x_train, x_test, y_train, y_test = train_test_split(x_data, y_data)
-x_train, x_test, y_train, y_test = np.array(x_train), np.array(x_test), np.array(y_train), np.array(y_test)
+x_train, x_test, y_train, y_test = np.array(x_train), np.array(x_test), np.array(y_train), np.array(y_test)#map(np.array, [x_train, x_test, y_train, y_test])
 print(x_train.shape, x_test.shape, y_train.shape, y_test.shape)
 
 model = models.Sequential()
-model.add(layers.Conv2D(32, (3, 3), activation='relu', input_shape=(480, 640, 3)))
+model.add(layers.Conv2D(32, (3, 3), activation='relu', input_shape=(height, width, 3)))
 model.add(layers.MaxPooling2D((2, 2)))
 model.add(layers.Conv2D(64, (3, 3), activation='relu'))
 model.add(layers.MaxPooling2D((2, 2)))
@@ -54,7 +54,7 @@ model.add(layers.Conv2D(64, (3, 3), activation='relu'))
 
 model.add(layers.Flatten())
 model.add(layers.Dense(64, activation='relu'))
-model.add(layers.Dense(10, activation='softmax'))
+model.add(layers.Dense(3, activation='softmax'))
 
 model.compile(optimizer='adam',
               loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
@@ -70,6 +70,7 @@ plt.xlabel('Epoch')
 plt.ylabel('Accuracy')
 plt.ylim([0.5, 1])
 plt.legend(loc='lower right')
+plt.show()
 
 test_loss, test_acc = model.evaluate(x_test, y_test, verbose=2)
 
