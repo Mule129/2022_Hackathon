@@ -1,0 +1,77 @@
+[
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "C:\\Users\\a24cc\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.5\\cores\\arduino"
+  },
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "C:\\Users\\a24cc\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.5\\variants\\standard"
+  },
+  {
+    "Sourcefile": "c:\\Users\\a24cc\\Documents\\Github\\2022_Hackathon\\build\\sketch\\Sketch.ino.cpp",
+    "Include": "HUSKYLENS.h",
+    "Includepath": "C:\\Users\\a24cc\\Documents\\Arduino\\libraries\\HUSKYLENS"
+  },
+  {
+    "Sourcefile": "c:\\Users\\a24cc\\Documents\\Github\\2022_Hackathon\\build\\sketch\\Sketch.ino.cpp",
+    "Include": "Wire.h",
+    "Includepath": "C:\\Users\\a24cc\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.5\\libraries\\Wire\\src"
+  },
+  {
+    "Sourcefile": "c:\\Users\\a24cc\\Documents\\Github\\2022_Hackathon\\build\\sketch\\Sketch.ino.cpp",
+    "Include": "SoftwareSerial.h",
+    "Includepath": "C:\\Users\\a24cc\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.5\\libraries\\SoftwareSerial\\src"
+  },
+  {
+    "Sourcefile": "c:\\Users\\a24cc\\Documents\\Github\\2022_Hackathon\\build\\sketch\\Sketch.ino.cpp",
+    "Include": "LiquidCrystal_I2C.h",
+    "Includepath": "C:\\Users\\a24cc\\Documents\\Arduino\\libraries\\LiquidCrystal_I2C"
+  },
+  {
+    "Sourcefile": "c:\\Users\\a24cc\\Documents\\Github\\2022_Hackathon\\build\\sketch\\Sketch.ino.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\a24cc\\Documents\\Arduino\\libraries\\HUSKYLENS\\DFRobot_HuskyLens.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\a24cc\\Documents\\Arduino\\libraries\\HUSKYLENS\\HUSKYLENS.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\a24cc\\Documents\\Arduino\\libraries\\HUSKYLENS\\HUSKYLENSMindPlus.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\a24cc\\Documents\\Arduino\\libraries\\HUSKYLENS\\HuskyLensProtocolCore.c",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\a24cc\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.5\\libraries\\Wire\\src\\Wire.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\a24cc\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.5\\libraries\\Wire\\src\\utility\\twi.c",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\a24cc\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.5\\libraries\\SoftwareSerial\\src\\SoftwareSerial.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\a24cc\\Documents\\Arduino\\libraries\\LiquidCrystal_I2C\\LiquidCrystal_I2C.cpp",
+    "Include": "",
+    "Includepath": null
+  }
+]

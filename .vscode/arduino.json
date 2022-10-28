@@ -1,6 +1,6 @@
 {
-    "sketch": "User\\Mule\\test.ino",
+    "sketch": "User\\Mule\\Sketch.ino",
     "board": "arduino:avr:uno",
-    "port": "COM3",
+    "port": "COM8",
     "output": ".\\build"
 }
