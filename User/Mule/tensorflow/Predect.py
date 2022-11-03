@@ -15,6 +15,7 @@ while True:
     img = np.array([img])
     
     prd = model_1.predict(img)
+    #print(f"predicton : {prd}")
     print(f"predicton : {prd}")
     if cv2.waitKey(1) > 0:
         break

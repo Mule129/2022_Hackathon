@@ -54,7 +54,7 @@ model.add(layers.Conv2D(64, (3, 3), activation='relu'))
 
 model.add(layers.Flatten())
 model.add(layers.Dense(64, activation='relu'))
-model.add(layers.Dense(3, activation='softmax'))
+model.add(layers.Dense(3))
 
 model.compile(optimizer='adam',
               loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
@@ -70,10 +70,11 @@ plt.xlabel('Epoch')
 plt.ylabel('Accuracy')
 plt.ylim([0.5, 1])
 plt.legend(loc='lower right')
-plt.show()
 
 test_loss, test_acc = model.evaluate(x_test, y_test, verbose=2)
 
 print(test_acc)
 
 model.save(r"2022_Hackathon\User\Mule\tensorflow\save_model\model.h5")
+
+plt.show()
